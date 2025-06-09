@@ -1,0 +1,22 @@
+資料預處理: 資料刪除、補齊、整理格式、提煉新特徵等 API: Application Programming Interface
+產生16筆資料
+淺拷貝: .copy()，會保留連結引用，可變物件會被改變；
+但大多數所要改變的數據是不可變物件，淺拷貝可滿足
+深拷貝: copy.deepcopy()，會增加計算成本
+.agg({ '銷售量': ['sum', 'mean', 'max'],
+'收入': ['sum', 'mean', 'min'] })，對col運用函數進行計算
+curdoc(): 返回當前的文檔物件給Bokeh構建網頁
+curdoc().add_root(): 加到網頁
+curdoc().add_root(column()): 放兩張圖以上，一束一束排
+curdor().title: 網頁標籤頁名稱
+bokeh.layouts: 簡稱column，可以放圖片的格子，
+如2*2格子可放四張圖
+終端機 -> bokeh serve --show .py，bokeh是執行檔作為serve端運行 for i, (region, color) in enumerate(zip(regions, colors)):
+enumerate 函數每次迭代時會返回一個元組(0, (Region1, Red))，
+該元組再拆包給i, (region, color)，如此三個都有值
+from bokeh.plotting import figure:
+figure().vbar、figure().line -> 加圖入畫框
+ 
+獲得目錄: d = os.path.dirname(__file__)d
+路徑相加: p = os.path.join(script_dir, file_name)
+os.chdir(): change directory，將工作目錄設置為.py位置
